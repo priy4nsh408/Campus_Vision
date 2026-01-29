@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome | RVCE RAG Assistant</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="dark-ui intro-page">
+
+<!-- TOP BAR -->
+<header class="app-header">
+  <div class="logo">🏛️ RVCE RAG Assistant</div>
+  <nav>
+    <a href="/logout" class="logout-btn">Logout</a>
+  </nav>
+</header>
+
+<div class="intro-layout">
+
+  <!-- LEFT COLUMN -->
+  <div class="intro-left">
+
+    <!-- TEXT BLOCK -->
+    <div class="intro-text">
+      <h1>Welcome, Priyansh Poddar 👋</h1>
+      <p>
+        The RVCE RAG Assistant is an AI-powered campus guide designed to help
+        students, faculty, and visitors quickly find information about
+        departments, facilities, navigation paths, and services.
+      </p>
+    </div>
+
+    <!-- FEATURE BUTTONS -->
+    <div class="intro-features">
+      <a href="{{ url_for('map_page') }}" class="feature-card">
+        🏫
+        <h4>Find Departments</h4>
+        <p>Locate blocks, labs, and offices.</p>
+      </a>
+
+      <a href="{{ url_for('map_page') }}#directions" class="feature-card">
+        🧭
+        <h4>Smart Navigation</h4>
+        <p>Step-by-step campus routes.</p>
+      </a>
+
+      <a href="/" class="feature-card">
+        📚
+        <h4>Campus Information</h4>
+        <p>Facilities, services, policies.</p>
+      </a>
+
+      <a href="/" class="feature-card">
+        ⚡
+        <h4>Instant Answers</h4>
+        <p>AI + campus-specific data.</p>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div class="intro-map">
+    <iframe
+      src="https://www.google.com/maps?q=RV%20College%20of%20Engineering&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+
+</div>
+
+</body>
+</html>

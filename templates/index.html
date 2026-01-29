@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RVCE RAG Assistant</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="dark-ui">
+
+<div class="app-container">
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo">🤖 RVCE RAG Assistant</div>
+    <nav>
+      <a href="{{ url_for('map_page') }}">Map</a>
+      <a href="/clear-history" onclick="return confirm('Clear chat history?')">Clear</a>
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Area -->
+  <main class="main-area">
+
+    <!-- RV Logo Watermark -->
+    <img
+      src="/static/rv_logo.png"
+      alt="RV Logo"
+      class="rv-watermark"
+    />
+
+    {% if not history %}
+    <!-- Empty State -->
+    <div class="hero">
+      <h1>What are you working on?</h1>
+    </div>
+    {% endif %}
+
+    <!-- Chat Messages -->
+    <div class="chat-box" id="chat-box">
+
+      {% for message in history %}
+        {% if message.role == "user" %}
+          <div class="chat-row user">
+            <div class="bubble user-bubble">
+              {{ message.content }}
+            </div>
+          </div>
+        {% else %}
+          <div class="chat-row bot">
+            <div class="bubble bot-bubble">
+              <div class="bot-content">
+                {{ message.content | safe }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+
+      {% if error %}
+        <div class="chat-row bot">
+          <div class="bubble error">{{ error }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+
+  </main>
+
+  <!-- Input Bar -->
+  <form
+    action="/ask"
+    method="post"
+    class="input-bar"
+    id="chat-form"
+    onsubmit="showLoading()"
+  >
+
+    <input
+      type="text"
+      name="question"
+      id="question"
+      placeholder="Ask anything"
+      autocomplete="off"
+      required
+    />
+
+    <input type="hidden" name="top_k" value="1">
+
+    <button type="submit" aria-label="Send">➤</button>
+
+  </form>
+
+</div>
+
+<!-- Loading Indicator -->
+<div id="loading-indicator" class="loading hidden">
+  <span></span><span></span><span></span>
+</div>
+
+<script>
+  // Auto-scroll to bottom
+  const chatBox = document.getElementById("chat-box");
+  if (chatBox) {
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  // Submit on Enter
+  const input = document.getElementById("question");
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      document.getElementById("chat-form").submit();
+    }
+  });
+
+  // Show loading animation
+  function showLoading() {
+    document.getElementById("loading-indicator").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>

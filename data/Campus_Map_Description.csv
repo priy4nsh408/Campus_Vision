@@ -1,0 +1,27 @@
+Location Name,Category,Relative Position,Description,latitiude,longitude
+Main Entrance,Entrance,North,Primary entry point to the campus,12.92468,77.498922
+Admin Block,Administrative Building,Central,Main administrative offices,12.923885,77.498632
+Parking,Facility,North of Admin Block,Parking area near main entrance,12.924083,77.498431
+Design Thinking Huddle,Academic Facility,North-West,Innovation and collaboration space,12.923328, 77.498097
+Mechanical Dept,Academic Department,West,Mechanical Engineering department,12.923058, 77.498370
+Biotech Quadrangle,Academic Area,West,Biotechnology department quadrangle,12.922782,77.498674
+Green House,Facility,South-West,Greenhouse for plant research,12.922854,77.499667
+EIM Auditorium,Auditorium,Near Admin Block,Auditorium for events and seminars,12.923121,77.498728
+Kriya Kalpa,Activity Center,Near Admin Block,Student activity and innovation center,12.92386,77.499432
+RV University,Academic Block,Central,University academic building,12.923329,77.499952
+Civil Dept,Academic Department,North-East,Civil Engineering department,12.92435,77.499437
+EEE Dept,Academic Department,East,Electrical & Electronics Engineering department,12.924311,77.500109
+ECE Dept,Academic Department,South-East of EEE,Electronics & Communication Engineering department,12.923815,77.499962
+CSE Dept,Academic Department,East,Computer Science & Engineering department,12.924383, 77.500294
+PE & Sports Dept,Sports Facility,East,Physical Education and Sports department,12.924824,77.500569
+Football & Cricket Ground,Sports Ground,Far East,Outdoor sports ground,12.92491,77.500038
+Health Centre,Facility,East,Medical and health services,12.924666,77.500842
+Temple,Religious Place,East,Campus temple,12.924666,77.500842
+Krishna Hostel,Hostel,South-East,Boys hostel,12.924056,77.500612
+Cauvery Boys Hostel,Hostel,South-East,Boys hostel,12.923932, 77.501159
+Mathematics Dept,Academic Department,South-East,Mathematics department,12.923937,77.501328
+Chem Engg & Physics Dept,Academic Department,South,Chemical Engineering and Physics department,12.923305,77.500085
+Telecommunication Dept,Academic Department,South,Telecommunication Engineering department,12.923708,77.500261
+Library,Library,South-Central,Central library for students and staff,12.922584,77.500156
+ISE and Aerospace Department,Academic Department,South of Library,Information Science and Aerospace department,12.923332,77.501069
+AIML and BT Dept,Academic Department,West,Artificial Inteligence and Machine Learning & Biotech Department,12.922782,77.498674

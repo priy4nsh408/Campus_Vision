@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Answer — RAG Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Answer</h1>
+      <div class="card">
+        <h2>Question</h2>
+        <p class="question">{{ question }}</p>
+
+        <h2>Answer</h2>
+        <div class="answer">{{ answer|replace('\n','<br>')|safe }}</div>
+
+        <h3>Sources</h3>
+        {% if sources %}
+        <ul class="sources">
+          {% for s in sources %}
+          <li>
+            <div class="source-info">{{ s.info }}</div>
+            {% if s.excerpt %}
+            <div class="source-excerpt">{{ s.excerpt }}</div>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>No sources returned.</p>
+        {% endif %}
+
+        <a href="/">Ask another question</a>
+      </div>
+    </div>
+  </body>
+</html>

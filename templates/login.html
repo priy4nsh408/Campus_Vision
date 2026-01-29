@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login | RVCE RAG Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      background: #fafafa;
+    }
+
+    /* ===============================
+   LEFT PANEL – PREMIUM UPGRADE
+================================ */
+.left {
+  width: 45%;
+  background: linear-gradient(180deg, #b7e7f6 0%, #b7e7f6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 48px;
+}
+
+/* Content wrapper */
+.left-content {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.logo span {
+  font-size: 36px;
+}
+
+/* Headline */
+.login-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+/* Subtitle / description */
+.login-subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+/* Divider */
+.login-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+  margin-bottom: 28px;
+}
+
+/* Google button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+  padding: 16px 24px;
+
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.google-btn:hover {
+  background: #f9fafb;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+/* Google icon */
+.google-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Small trust text */
+.login-footnote {
+  margin-top: 22px;
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+
+    /* ===============================
+       RIGHT PANEL – CAMPUS IMAGE
+    =============================== */
+    .right {
+      width: 55%;
+      position: relative;
+      background: url("/static/campus.jpg") center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    /* Dark overlay */
+    .right::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.65)
+      );
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 36px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+      max-width: 440px;
+      backdrop-filter: blur(6px);
+    }
+
+    .card h2 {
+      margin: 0 0 18px;
+      font-size: 24px; /* ⬆ bigger */
+      color: #111827;
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 14px;
+    }
+
+    /* ===============================
+       RESPONSIVE
+    =============================== */
+    @media (max-width: 900px) {
+      body {
+        flex-direction: column;
+      }
+
+      .left {
+        width: 100%;
+      }
+
+      .right {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LEFT -->
+  <div class="left">
+  <div class="left-content">
+
+    <div class="logo">
+      🤖 RVCE RAG Assistant
+    </div>
+
+    <div class="login-title">
+      Welcome back 👋
+    </div>
+
+    <div class="login-subtitle">
+      Sign in to access smart campus navigation, instant information,
+      and AI-powered assistance tailored for RVCE.
+    </div>
+
+    <a href="/login" class="google-btn">
+      <img
+        class="google-icon"
+        src="https://www.svgrepo.com/show/475656/google-color.svg"
+        alt="Google"
+      >
+      Continue with Google
+    </a>
+
+  </div>
+</div>
+
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="card">
+      <h2>
+        YOUR PERSONAL AI ASSISTANT<br>
+        FOR RVCE CAMPUS
+      </h2>
+      <img
+        src="https://api.learntechww.com/college_logo/logo1747830943224.webp"
+        alt="RVCE"
+      >
+    </div>
+  </div>
+
+</body>
+</html>
